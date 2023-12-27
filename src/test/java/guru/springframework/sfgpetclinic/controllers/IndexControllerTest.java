@@ -1,5 +1,6 @@
 package guru.springframework.sfgpetclinic.controllers;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -29,6 +30,8 @@ class IndexControllerTest {
 
         assertEquals("index", controller.index(), () -> "Another Expensive Message " +
                 "Make me only if you have to");
+
+        Assertions.assertThat(controller.index()).isEqualTo("index");
     }
 
     @Test
