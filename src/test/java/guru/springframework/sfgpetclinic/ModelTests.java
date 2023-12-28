@@ -8,6 +8,6 @@ public interface ModelTests {
 
     @BeforeEach
     default void beforeEachMethod(TestInfo testInfo){
-        System.out.println( "Running Test -" + testInfo.getDisplayName() );
+        System.out.println( "Running Test - " + testInfo.getDisplayName() );
     }
 }
